@@ -25,6 +25,7 @@ test('Slow Motion Video Recording', async () => {
     await page.getByRole('button', { name: 'Submit' }).click();
     const text = await page.locator('.post-content').innerText();
     await expect(text).toContain('Congratulations student. You successfully logged in!');
-    page.close()
+    await page.close();
+    await browser.close();
 
 })
