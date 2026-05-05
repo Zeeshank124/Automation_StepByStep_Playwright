@@ -4,7 +4,7 @@ test('Slow Motion Video Recording', async () => {
     //Creating Isolated Browser Context
     const browser = await chromium.launch({
         slowMo: 500, //500 millisecond delay between each action
-        headless: false, //to see the browser actions
+        headless: true, //Run in headless mode for CI environments
     }
     )
     const context = await browser.newContext({
