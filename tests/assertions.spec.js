@@ -12,9 +12,7 @@ test('Assertions', async ({page}) => {
 
     }
     await expect(page.locator('text=The Kitchen')).toBeVisible(); //Check element is visible or not
-    await expect.soft(page.locator('text=The Kitchen')).toBeHidden();  //Check element is hidden or not
     await expect(page.locator('text=The Kitchen')).toBeEnabled(); //Check element is enabled or not
-    await expect.soft(page.locator('text=The Kitchen')).toBeDisabled(); //Check element is disabled or not
     await expect(page.locator('text=The Kitchen')).toHaveAttribute('class','chakra-heading css-dpmy2a' ) //Check element has attribute or not
     
 })
