@@ -38,16 +38,52 @@ A comprehensive Playwright test automation project for learning and demonstratin
 ```
 playwright_automation/
 ├── tests/
-│   ├── assertions.spec.js      # Assertion testing examples
-│   ├── example.spec.js          # Basic Playwright examples
-│   ├── firstTest.spec.js        # Initial test cases
-│   ├── loginTest.spec.js        # Authentication testing
-│   └── selectors.spec.js        # Selector strategy examples
-├── playwright-report/           # Generated HTML reports
-├── test-results/               # Test execution results
-├── playwright.config.js        # Playwright configuration
-├── package.json               # Project dependencies
-└── README.md                  # This file
+│   ├── assertions.spec.js           # Assertion testing examples
+│   ├── example.spec.js               # Basic Playwright examples
+│   ├── firstTest.spec.js             # Initial test cases
+│   ├── HooksandGroups.spec.js        # Test hooks and grouping
+│   ├── loginTest.spec.js             # Authentication testing
+│   ├── selectors.spec.js             # Selector strategy examples
+│   ├── slowMotion_videoRecording.spec.js  # Slow motion and video recording
+│   └── TagsandAnnotations.spec.js    # Tags and test annotations
+├── videos/                          # Recorded test videos
+├── playwright-report/               # Generated HTML reports
+├── test-results/                   # Test execution results
+├── playwright.config.js            # Playwright configuration
+├── package.json                   # Project dependencies
+└── README.md                      # This file
+```
+
+## 🧪 Running Tests
+
+Run all tests:
+```bash
+npx playwright test
+```
+
+Run tests in a specific browser:
+```bash
+npx playwright test --project chromium
+```
+
+Run a specific test file:
+```bash
+npx playwright test tests/example.spec.js
+```
+
+Run tests with tags:
+```bash
+npx playwright test --grep "@smoke"
+```
+
+Generate and view HTML report:
+```bash
+npx playwright show-report
+```
+
+Run tests in headed mode (visible browser):
+```bash
+npx playwright test --headed
 ```
 
 ## 🧪 Running Tests
